@@ -1,0 +1,9 @@
+<div class="flex items-center gap-4">
+  <button class="btn btn-accent" (click)="authAction.emit(false)">
+    Cancel
+  </button>
+  <app-icon-button (click)="authAction.emit(true)">
+    <ng-content slot="button-icon" select="[slot='button-icon']" />
+    <ng-content />
+  </app-icon-button>
+</div>

@@ -24,6 +24,19 @@
     </li>
   </ul>
   <app-dialog>
+    <h2 ngProjectAs="dialog-heading">This is dialog heading</h2>
+    <p>This is the main content</p>
+    <a>There can be multiple elements here</a>
+    <app-dialog-auth-actions (authAction)="onAuthAction($event)" ngProjectAs="dialog-actions">
+      @if (confirming()) {
+        <span slot="button-icon" class="loading loading-spinner loading-xs"></span>
+      } @else {
+        <svg slot="button-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+        </svg>
 
+      }
+      <span>Confirm</span>
+    </app-dialog-auth-actions>
   </app-dialog>
 </div>
