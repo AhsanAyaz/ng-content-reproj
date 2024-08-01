@@ -1,17 +1,13 @@
 <dialog #dialogRef class="modal">
   <div class="modal-box">
     <h1 class="text-lg font-bold pb-2 border-b-2 border-b-primary-content">
-      <ng-content select="dialog-heading" />
+      Dialog Heading
     </h1>
-    <p class="py-4">
-      <ng-content />
-    </p>
+    <p class="py-4">Dialog Content</p>
     <div class="modal-action">
-      <ng-content select="dialog-actions">
-        <button class="btn btn-primary" (click)="dialogEl().close()">
-          Close me
-        </button>
-      </ng-content>
+      <button class="btn btn-primary" (click)="dialogEl().close()">
+        Close me
+      </button>
     </div>
   </div>
 </dialog>
