@@ -3,7 +3,7 @@
     Cancel
   </button>
   <app-icon-button (click)="authAction.emit(true)">
-    <ng-content slot="button-icon" select="[slot='button-icon']" />
+    <ng-content ngProjectAs="button-icon" select="button-icon" />
     <ng-content />
   </app-icon-button>
 </div>
